@@ -1,4 +1,4 @@
-# jbc-2016
+# cms-norman-jbc-2020
 Junior Botball Challenge
 
 Helpful Links:
@@ -66,9 +66,9 @@ Helpful Links:
     motor(3, 0);
     msleep(500);
     ```
-    
+
     So instead of this jerky code:
-    
+
     ```c
     printf("Move forward.\n");
     motor(0,  40);
@@ -77,25 +77,25 @@ Helpful Links:
     motor(0, -40);
     msleep(500);
     ```
-    
+
     Include a pause like:
-    
+
     ```c
     printf("Move forward.\n");
     motor(0,  40);
     msleep(500);
-        
+
     printf("Pause movement\n");
     motor(0, 0);
     motor(3, 0);
     msleep(500);
-    
+
     printf("Move backward.\n");
     motor(0, -40);
     msleep(500);
     ```
-        
-    
+
+
 1. servos arms should be 'aligned' and never hit resistance.
 1. wires are tidy, and can't be pinched or wind around axles.
 1. an instructor should install & align the servo arms.

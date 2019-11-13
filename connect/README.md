@@ -8,6 +8,8 @@
 
 1. If you run it on a cronjob, do not plan to do anything else with your laptop on the internet.  Unless the machine has two network connections, and you can keep them separate
 
+1. I open the repo in Atom, and execute the shell script with [atom-runner](https://atom.io/packages/atom-runner).
+
 ## Short-term TODOs:
 
 1. Refactor the configuration options out of the scripts.  Put them in something like a [yaml](http://www.yaml.org/start.html) or [json](http://www.json.org/) file.
@@ -39,11 +41,11 @@
     1. Number of users (and their number of programs) for each Wallaby.
     1. Code health or code complexity (*e.g.*, [lizard](https://github.com/terryyin/lizard)) of each program.
 1. Destination of backups, such as AWS S3.  Like Git/GitHub, you can easily [cached your credentials](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) so nothing is stored in the configuration file.  Ideally this location is in the cloud, so the backup utility runs just as easily at competitions as at the home institutions during class.  
-    
-1. However, I would still advocate GitHub. 
+
+1. However, I would still advocate GitHub.
     1. It is easy to turn back the clock to any commit, even if it was months ago.  Especially with [SourceTree](https://www.sourcetreeapp.com/).
     1. The previous code versions can be accessed through the browser (on GitHub.com), or form the backup machine.
-    1. It is probably easier to manage the connections.  You can run commits every ~10 minutes (when you're connecting only to the Wallabies, and you're not on the internet).  Every ~1 hour, connect to the internet, and push the 6 commits to the central GitHub server. 
+    1. It is probably easier to manage the connections.  You can run commits every ~10 minutes (when you're connecting only to the Wallabies, and you're not on the internet).  Every ~1 hour, connect to the internet, and push the 6 commits to the central GitHub server.
     1. Private repositories are [free for schools](https://education.github.com/), for those institutions who care about being scooped.  
 1. In addition to writing to the `.logs/` directory, write to a SQLite database.  That would make the real-time report much easier to generate.
 

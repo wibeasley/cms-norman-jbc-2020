@@ -7,15 +7,15 @@
 #   If a wallaby is missing or out of range, the script will skip over it after the nmcli times out.
 #   Or temporarily comment out the Wallaby in the array below.
 bot_ssids=(
-  #"1395-wallaby"  # 5: B & B
-  #"1397-wallaby"  # 5: J & V & M
-  "1399-wallaby"  # 3: C & W
-  #"1407-wallaby"  # 5: M & O          # USB
-  #"1408-wallaby"  # 3: A & R
-  #"2486-wallaby"  # 4: L & M
-  #"2488-wallaby"  # 4: A & V
-  # "2494-wallaby"  # 4: C & D
-  # "4211-wallaby"  # 3: A & B
+  #"1395-wallaby"  # 3: A & I
+  #"1397-wallaby"  # 3: A & M & S
+  "1399-wallaby"  # 4: L & W
+  #"1407-wallaby"  # 5: A & O          # USB
+  "1408-wallaby"  # 4: A & R
+  #"2486-wallaby"  # 3: S & K
+  #"2488-wallaby"  # unassigned
+  "2494-wallaby"  # 5: C & D
+  "4211-wallaby"  # 4: C & B
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com

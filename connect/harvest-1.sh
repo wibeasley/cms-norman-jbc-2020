@@ -14,8 +14,8 @@ bot_ssids=(
   #"1408-wallaby"  # 3: A & R
   #"2486-wallaby"  # 4: L & M
   #"2488-wallaby"  # 4: A & V
-  #"2494-wallaby"  # 4: C & D
-  "4211-wallaby"  # 3: A & B
+  "2494-wallaby"  # 4: C & D
+  # "4211-wallaby"  # 3: A & B
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com

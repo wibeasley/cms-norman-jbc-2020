@@ -11,10 +11,10 @@ bot_ssids=(
   #"1397-wallaby"  # 5: J & V & M
   #"1399-wallaby"  # 3: C & W
   #"1407-wallaby"  # 5: M & O          # USB
-  #"1408-wallaby"  # 3: A & R
+  "1408-wallaby"  # 3: A & R
   #"2486-wallaby"  # 4: L & M
   #"2488-wallaby"  # 4: A & V
-  "2494-wallaby"  # 4: C & D
+  # "2494-wallaby"  # 4: C & D
   # "4211-wallaby"  # 3: A & B
 )
 

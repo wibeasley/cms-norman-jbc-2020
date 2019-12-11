@@ -7,8 +7,8 @@
 #   If a wallaby is missing or out of range, the script will skip over it after the nmcli times out.
 #   Or temporarily comment out the Wallaby in the array below.
 bot_ssids=(
-  "1395-wallaby"  # 3: A & I
-  #"1397-wallaby"  # 3: A & M & S
+  #"1395-wallaby"  # 3: A & I
+  "1397-wallaby"  # 3: A & M & S
   # "1399-wallaby"  # 4: L & W
   #"1407-wallaby"  # 5: A & O          # USB
   #"1408-wallaby"  # 4: A & R

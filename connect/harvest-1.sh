@@ -61,11 +61,12 @@ do
   fi
 
   echo "Attempting to download files from $i over $url."
-  if [ "$use_wifi" = true ] ; then
-    scp -r root@192.168.125.1:'~/Documents/KISS/' ./$i/
-  else
-    scp -r root@192.168.124.1:'~/Documents/KISS/' ./$i/
-  fi
+  scp -r root@$url:'~/Documents/KISS/' ./$i/
+  #if [ "$use_wifi" = true ] ; then
+  #  scp -r root@192.168.125.1:'~/Documents/KISS/' ./$i/
+  #else
+  #  scp -r root@192.168.124.1:'~/Documents/KISS/' ./$i/
+  #fi
   #scp -r root@192.168.124.1:'~/Documents/KISS/Default\ User/' ~/Documents/kipr/cms-norman-jbc-2020/$i/
   #scp_args=`echo -r root@$url:'~/Documents/KISS/Default\\ User/' ~/Documents/kipr/cms-norman-jbc-2020/$i/`
   #echo "SCP arguments:" $scp_args

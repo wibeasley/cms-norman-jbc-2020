@@ -56,7 +56,7 @@ int main()
     printf("go straight\n");
     motor (0,55);
     motor (3,55);
-    msleep(7300);
+    msleep(7000);
     
     printf("turn\n");
     motor (0,5);

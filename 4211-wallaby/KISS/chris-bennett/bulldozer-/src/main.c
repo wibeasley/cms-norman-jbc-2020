@@ -13,8 +13,12 @@ int main()
     msleep(22000);
  
  printf("turn left");
- motor(0,50);
- motor(3,0);
+ motor(0,40);
+ motor(3,-10);
  msleep(2000);
-return 0;
+printf("move forewards");
+    motor (0,50);
+    motor (3,50);
+    msleep(5000);
+ return 0;
 }

@@ -41,11 +41,11 @@ int main()
     motor (0,0);
     motor (3,0);
     msleep(500);
-    
+ 
     printf("turn\n");
     motor (0,5);
     motor (3,50);
-    msleep(5600);
+    msleep(5000);
     
     printf("stay\n");
     motor (0,0);
@@ -67,6 +67,31 @@ int main()
     printf("turn\n");
     motor (0,0);
     motor (3,60);
-    msleep(3500);
+    msleep(3400);
+    
+    printf("go straight\n");
+    motor (0,-55);
+    motor (3,-55);
+    msleep(3000);
+    
+    printf("stay\n");
+    motor (0,0);
+    motor (3,0);
+    msleep(900);
+    
+    printf("go straight\n");
+    motor (0,55);
+    motor (3,55);
+    msleep(3000);
+    
+    printf("turn\n");
+    motor (0,50);
+    motor (3,5);
+    msleep(2500);
+    
+    printf("go straight\n");
+    motor (0,55);
+    motor (3,55);
+    msleep(7000);
     return 0;
 }

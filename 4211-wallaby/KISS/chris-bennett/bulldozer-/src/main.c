@@ -5,11 +5,16 @@ int main()
     printf("move forewards");
     motor (0,50);
     motor (3,50);
-    msleep(4000);
+    msleep(5000);
     
     printf("turn rigt");
     motor (0,30);
     motor (3,50);
-    msleep(14000);
-    return 0;
+    msleep(22000);
+ 
+ printf("turn left");
+ motor(0,50);
+ motor(3,0);
+ msleep(2000);
+return 0;
 }

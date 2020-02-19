@@ -3,9 +3,8 @@
 int main()
 {
     printf("go forward\n");
-    motor(0, 45);
-    motor(3, 45);
-    msleep(60000);
-        
+    motor(0, 49);
+    motor(3, 50);
+    msleep(7500);
     return 0;
 }

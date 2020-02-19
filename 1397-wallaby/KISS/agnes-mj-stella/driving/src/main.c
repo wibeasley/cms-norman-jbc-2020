@@ -2,13 +2,12 @@
 
 int main()
 {
-    printf("Hello World\n");
-    motor(0,80);
-    motor(3, 97);
-    msleep(8000);
+    printf("Hello World\n");//step 1 caster location k -8
+    motor(0, 85);
+    motor(3, 90);
+    msleep(5500);
     
-    
-    
-    
-    return 0;
+    motor(0, -85);
+    motor(3, -90);
+    msleep(5500); 
 }

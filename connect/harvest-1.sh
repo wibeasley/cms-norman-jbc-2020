@@ -10,18 +10,18 @@ bot_ssids=(
   #"1395-wallaby"  # 3: A & I
   #"1397-wallaby"  # 3: A & M & S
   "1399-wallaby"  # 4: L & W          # USB
-  #"1407-wallaby"  # 5: A & O
-  #"1408-wallaby"  # 4: A & R
+  "1407-wallaby"  # 5: A & O
+  "1408-wallaby"  # 4: A & R
   #"2486-wallaby"  # 3: S & K
   #"2488-wallaby"  # unassigned
-  #"2494-wallaby"  # 5: C & D
-  #"4211-wallaby"  # 4: C & B
+  "2494-wallaby"  # 5: C & D
+  "4211-wallaby"  # 4: C & B
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
-network_ssid="BeasleyGuest2"
+#network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
-# network_ssid="Childrens House"
+network_ssid="Childrens House"
 use_wifi=true
 #use_wifi=false
 
@@ -31,7 +31,7 @@ else
   url="192.168.124.1"  # For usb connection to any wallaby
 fi
 echo "url: $url; (use_wifi: $use_wifi)"
-#url="23.208.224.170" # Ffor debugging (ie, cisco.com)
+#url="23.208.224.170" # For debugging (ie, cisco.com)
 
 echo "Looping over ${#bot_ssids[@]} Wallabies"
 for i in "${bot_ssids[@]}"

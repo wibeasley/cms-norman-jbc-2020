@@ -5,11 +5,12 @@ int main()
     printf("go forward\n");
     motor(0, 40);
     motor(3, 40);
-    msleep(5000);
+    msleep(7650);
  
-    printf("turn\n");
-    motor(0, 30);
-    msleep(9500);
+    printf("forward\n");
+    motor(3, 30);
+    motor(0,  0);
+    msleep(4000);
     
     return 0;
 }

@@ -12,7 +12,7 @@ int main()
     motor(0,-40);
     msleep(6000); 
     
-    motor(3,70);
+    motor(3,80);
     motor(0,10);
     msleep(6000);
     return 0;

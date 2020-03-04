@@ -3,20 +3,22 @@
 int main()
 {
 
+    
+    
  printf("hello");   
- motor(0,45);   
+ motor(0,43);   
  motor(3,44);   
- msleep(6000);   
+ msleep(7000);   
     
     
   printf("hello");  
-  motor(0,45);
-  motor(3,00);
-   msleep(6000); 
+  motor(0,1);
+  motor(3,44);
+   msleep(3000); 
     
- 
+ printf("hello");
+ motor(0,43);   
+ motor(3,44);  
+ msleep(5000);      
     
-   
-  return 0;     
-  
 }

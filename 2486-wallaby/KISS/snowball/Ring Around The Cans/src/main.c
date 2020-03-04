@@ -20,12 +20,12 @@ int main()
     printf("pivot");
     motor(3, 30);
     motor(0, 0);
-    msleep(4000);
+    msleep(4500);
     
     printf("go forward");
     motor(3, 40);
-    motor(0, 39);
-    msleep(6000);
+    motor(0, 40);
+    msleep(9000);
     
     return 0;
 }

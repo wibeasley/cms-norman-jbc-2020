@@ -13,8 +13,8 @@ bot_ssids=(
   #"1407-wallaby"  # 5: A & O
   #"1408-wallaby"  # 4: A & R
   #"2486-wallaby"  # 3: S & K
-  #"2488-wallaby"  # unassigned
-  "2494-wallaby"  # 5: C & D
+  "2488-wallaby"  # unassigned
+  #"2494-wallaby"  # 5: C & D
   #"4211-wallaby"  # 4: C & B
 )
 

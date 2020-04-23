@@ -1,16 +1,19 @@
 #!/usr/bin/python
 import os, sys, math
 from wallaby import *
-
-
-distance_leg_long_1 = 1400 * 4
-distance_leg_width  = 1400 * 2
-distance_leg_long_2 = 1400 * 2.5
-
+        
 def pause():
     mav(0, 0)
     mav(3, 0)
     msleep(2000)
+        
+def set_servos_neutral():
+    print "neutral servos"
+    enable_servos()
+    set_servo_position(0, 600)
+    set_servo_position(3, 300)
+    msleep(500)
+    pause()
 
 def positions_print():
     print "left: " + str(get_motor_position_counter(3)) + "; right: " + str(get_motor_position_counter(0))
@@ -22,25 +25,22 @@ def positions_clear():
 def move_straight(distance, message):
     print message
     positions_clear()
-    print "before while"
     while abs(get_motor_position_counter(0)) < abs(distance):
-        print "before positions print"
         positions_print()
-        print "before direction"
-        # print type(distance)
         direction = math.copysign(1, distance)
-        print "before mav"
-        mav(0, int(300 * direction))
-        mav(3, int(320 * direction))
-        print "before msleep"
-        msleep(100)     
-        print "after msleep"
+        if 0 <= direction:
+            mav(0, int(300 * direction))  # right motor
+            mav(3, int(321 * direction))  # left motor
+        else: 
+            mav(0, int(300 * direction))  # right motor
+            mav(3, int(323 * direction))  # left motor
+        msleep(100)
     pause()
-    
+            
 def pivot(rotations, message):  
     print message
     positions_clear()
-    clicks_per_rotation = 3692
+    clicks_per_rotation = 3585
     distance_pivot = clicks_per_rotation * rotations
     print "distance goal: " + str(distance_pivot)
     while abs(get_motor_position_counter(0)) < abs(distance_pivot):
@@ -51,25 +51,19 @@ def pivot(rotations, message):
         msleep(100)     
     pause()
             
-            
+               
 def main():
-    print "Starting `figure-eight-1`"
+    print "Starting `calibrate-straight-1`"
+    set_servos_neutral()
+    # move_straight( 8000 * 3, "Move up")
+    # move_straight(-8000 * 3, "Move back")
+    # move_straight(+8000, "Move up")
+    pivot(+4, "Turn right")  
+    #pivot(-4, "Turn left") 
+    # move_straight(-8000, "Move back")
         
-    move_straight(distance_leg_long_1, "Move forward")    
-    pivot(-.25, "Turn left")
-    move_straight(distance_leg_width, "Move across board")  
-    pivot(+.25, "Turn right")  
-    move_straight(distance_leg_long_2, "Move forward")     
-    pivot(+.25, "Turn right")  
-    move_straight(distance_leg_width, "Move across board")    
-    pivot(+.25, "Turn right")  
-    move_straight(distance_leg_long_2, "Move forward")      
-    pivot(+.25, "Turn right")  
-    move_straight(distance_leg_width, "Move across board")  
-    pivot(-.25, "Turn left")
-    move_straight(distance_leg_long_1, "Return to start")    
-        
-    print "Completed"
+    # pivot(+4, "Turn right")  
+    # pivot(-4, "Turn left")  
 
 if __name__== "__main__":
     sys.stdout = os.fdopen(sys.stdout.fileno(),"w",0)

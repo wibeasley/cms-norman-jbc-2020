@@ -22,12 +22,14 @@ def positions_clear():
     clear_motor_position_counter(0) 
     clear_motor_position_counter(3)
         
-def move_straight(distance, message):
+def move_straight(distance_inches, message):
     print message
+    clicks_per_inch = 207.5
+    distance_clicks = int(distance_inches * clicks_per_inch)
     positions_clear()
-    while abs(get_motor_position_counter(0)) < abs(distance):
+    while abs(get_motor_position_counter(0)) < abs(distance_clicks):
         positions_print()
-        direction = math.copysign(1, distance)
+        direction = math.copysign(1, distance_clicks)
         if 0 <= direction:
             mav(0, int(300 * direction))  # right motor
             mav(3, int(321 * direction))  # left motor
@@ -55,11 +57,11 @@ def pivot(rotations, message):
 def main():
     print "Starting `calibrate-straight-1`"
     set_servos_neutral()
-    # move_straight( 8000 * 3, "Move up")
-    # move_straight(-8000 * 3, "Move back")
+    move_straight(+35, "Move up")
+    move_straight(-35, "Move back")
     # move_straight(+8000, "Move up")
-    pivot(+4, "Turn right")  
-    #pivot(-4, "Turn left") 
+    # pivot(+4, "Turn right")  
+    # pivot(-4, "Turn left") 
     # move_straight(-8000, "Move back")
         
     # pivot(+4, "Turn right")  

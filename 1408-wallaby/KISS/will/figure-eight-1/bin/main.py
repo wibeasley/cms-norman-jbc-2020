@@ -2,33 +2,36 @@
 import os, sys, math
 from wallaby import *
 
+port_motor_left  = 3
+port_motor_right = 0
+port_servo_raise = 0
+port_servo_pinch = 3
+
 distance_leg_long_1 = 23
 distance_leg_width  = 14
 distance_leg_long_2 = 15
-    
-#!/usr/bin/python
-import os, sys, math
-from wallaby import *
         
 def pause():
-    mav(0, 0)
-    mav(3, 0)
+    mav(port_motor_right, 0)
+    mav(port_motor_left , 0)
     msleep(2000)
         
 def set_servos_neutral():
     print "neutral servos"
     enable_servos()
-    set_servo_position(0, 600)
-    set_servo_position(3, 300)
+    set_servo_position(port_servo_raise, 600)
+    set_servo_position(port_servo_pinch, 300)
     msleep(500)
     pause()
 
 def positions_print():
-    print "left: " + str(get_motor_position_counter(3)) + "; right: " + str(get_motor_position_counter(0))
+    print \
+        "left: " + str(get_motor_position_counter(port_motor_left)) + \
+        "; right: " + str(get_motor_position_counter(port_motor_right))
         
 def positions_clear():
-    clear_motor_position_counter(0) 
-    clear_motor_position_counter(3)
+    clear_motor_position_counter(port_motor_right) 
+    clear_motor_position_counter(port_motor_left )
         
 def move_straight(distance_inches, message):
     print message + "; straight for " + str(distance_inches) + " inches."
@@ -39,11 +42,11 @@ def move_straight(distance_inches, message):
         positions_print()
         direction = math.copysign(1, distance_clicks)
         if 0 <= direction:
-            mav(0, int(300 * direction))  # right motor
-            mav(3, int(321 * direction))  # left motor
+            mav(port_motor_right, int(300 * direction))
+            mav(port_motor_left , int(321 * direction))
         else: 
-            mav(0, int(300 * direction))  # right motor
-            mav(3, int(323 * direction))  # left motor
+            mav(port_motor_right, int(300 * direction))
+            mav(port_motor_left , int(323 * direction))
         msleep(100)
     pause()
             
@@ -53,17 +56,16 @@ def pivot(rotations, message):
     clicks_per_rotation = 3585
     distance_pivot = clicks_per_rotation * rotations
     print "distance goal: " + str(distance_pivot)
-    while abs(get_motor_position_counter(0)) < abs(distance_pivot):
+    while abs(get_motor_position_counter(port_motor_right)) < abs(distance_pivot):
         positions_print()
         direction = math.copysign(1, distance_pivot)
-        mav(0, int(300 * -direction))
-        mav(3, int(320 * +direction))
+        mav(port_motor_right, int(300 * -direction))
+        mav(port_motor_left , int(320 * +direction))
         msleep(100)     
     pause()
 
 def main():
     print "Starting `figure-eight-1`"
-        
     move_straight(distance_leg_long_1, "Move forward")    
     pivot(-.25, "Turn left")
     move_straight(distance_leg_width, "Move across board")  

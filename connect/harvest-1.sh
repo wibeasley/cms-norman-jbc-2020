@@ -14,14 +14,14 @@ bot_ssids=(
   # "1408-wallaby"  # 4: A & R
   #"2486-wallaby"  # 3: S & K
   #"2488-wallaby"  # unassigned
-  "2494-wallaby"  # 5: C & D
+  "2494-wallaby"  # 5: A & A
   #"4211-wallaby"  # 4: C & B
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
 # network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
-network_ssid="Childrens-Guest-1"
+network_ssid="Childrens-Pri-1"
 use_wifi=true
 #use_wifi=false
 

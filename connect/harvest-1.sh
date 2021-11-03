@@ -10,12 +10,12 @@ bot_ssids=(
   #"1395-wallaby"  # 3: A & I
   #"1397-wallaby"  # 3: A & M & S
   #"1399-wallaby"  # 4: L & W          # USB
-  #"1407-wallaby"  # 5: A & O
+  "1407-wallaby"  # 6: A & W
   # "1408-wallaby"  # 4: A & R
   #"2486-wallaby"  # 3: S & K
   #"2488-wallaby"  # unassigned
   # "2494-wallaby"  # 5: A & A
-  "4211-wallaby"  # 5: C & S
+  # "4211-wallaby"  # 5: C & S
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com

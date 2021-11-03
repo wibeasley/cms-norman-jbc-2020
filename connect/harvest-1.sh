@@ -8,9 +8,9 @@
 #   Or temporarily comment out the Wallaby in the array below.
 bot_ssids=(
   #"1395-wallaby"  # 3: A & I
-  #"1397-wallaby"  # 3: A & M & S
+  "1397-wallaby"  # 4: A & C
   #"1399-wallaby"  # 4: L & W          # USB
-  "1407-wallaby"  # 6: A & W
+  # "1407-wallaby"  # 6: A & W
   # "1408-wallaby"  # 4: A & R
   #"2486-wallaby"  # 3: S & K
   #"2488-wallaby"  # unassigned
@@ -22,8 +22,8 @@ bot_ssids=(
 # network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
 network_ssid="Childrens-Pri-1"
-# use_wifi=true
-use_wifi=false
+use_wifi=true
+# use_wifi=false
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby

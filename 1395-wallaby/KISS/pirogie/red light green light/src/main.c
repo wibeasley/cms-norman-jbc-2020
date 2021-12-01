@@ -20,6 +20,29 @@ int main()
     printf("yellow light\n");
     motor(0,30);
     motor(3,0);
-    msleep(2500);
+    msleep(2900);
+  
+    printf("green light\n");
+    motor(0,40);
+    motor(3,40);
+    msleep(2000);
+    
+    printf("yellow light\n");
+    motor(0,30);
+    motor(3,0);
+    msleep(2800);
+    
+    printf("green light\n");
+    motor(0,40);
+    motor(3,40);
+    msleep(4500);
+    
+    printf("green light\n");
+    motor(0,0);
+    motor(3,0);
+    msleep(2000);
     return 0;
 }
+
+
+

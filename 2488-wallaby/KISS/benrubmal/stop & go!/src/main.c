@@ -22,7 +22,7 @@ int main()
 printf("turn\n");
     motor(0,42);
     motor(3,-40);
-    msleep(6900);   
+    msleep(7000);   
     
     return 0;
 }

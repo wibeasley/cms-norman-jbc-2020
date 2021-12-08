@@ -27,6 +27,6 @@ int main()
     printf("GO FORWARD TO THE FINISH LINE!!!WHOOOOOOOO\n");
     motor(0, 30);
     motor(3, 30);
-    msleep(11000);
+    msleep(12000);
     return 0;
 }

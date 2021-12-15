@@ -55,9 +55,9 @@ int main()
     printf(" NoW Go FoWard >=(\n");
     motor(0, 35);
     motor(3, 40);
-    msleep(6500);
+    msleep(8200);
     
-    printf("jeeeeeeeeezzzzzz fine have a break\n");
+    printf("jeeezzzzzz fine have a break\n");
     motor(0, 0);
     motor(3, 0);
     msleep(1000);
@@ -71,6 +71,11 @@ int main()
     motor(0, 0);
     motor(3, 0);
     msleep(1500);
+    
+    printf(" HiyathereIexistlet'sgoforwardshallwe?\n");
+    motor(0, 35);
+    motor(3, 30);
+    msleep(8000);
     
     return 0;
 }

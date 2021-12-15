@@ -34,7 +34,18 @@ int main()
     motor(0, 43);
     motor(3, 17);
     
-    msleep(6476);
+    msleep(6254);
+    
+    
+    
+    
+    
+    printf("SLAYYYYYYYYY S- AHHHHHHHHHHHHHHHHHHHHHHH wow that was a reacton-\n");
+    
+    motor(0, 20);
+    motor(3, 30);
+    
+    msleep(7477);
     
     
     

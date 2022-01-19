@@ -2,9 +2,17 @@
 
 int main()
 {
-    printf("Hi, I am wallaby and I am 1-2 years old :D I am beautiful bow down to me >:)\n");
-    return 0;
-    motor(0, 37);
+    printf("wallgoferward\n");  
+    motor(0, 23);
     motor(3, 23);
-    msleep(4300);
+    msleep(12600);
+    
+    printf("tuuuurrrrnnnnnn yerrrrrself clockwise");
+    motor(0, 19);
+    motor(3, 44);
+    msleep(6300);
+    
+    
+    
+    return 0;  
 }

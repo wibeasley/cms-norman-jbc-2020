@@ -2,7 +2,7 @@
 
 int main()
 {
-    //Place Tai (AKA 4211 Wallaby) on g1
+    //Place Tai (AKA 4211 Wallaby) on g1 or j1
     
     printf("Go forward =D\n");
     motor(0, 35);
@@ -77,7 +77,7 @@ int main()
     printf(" HiyathereIexistlet'sgoforwardshallwe?\n");
     motor(0, 30);
     motor(3, 31);
-    msleep(7500);
+    msleep(9500);
     
     printf("break. now. i will make you speak in lowercase.\n");
     motor(0, 0);
@@ -88,5 +88,15 @@ int main()
     motor(0, 40);
     motor(3, 0);
     msleep(3000);
+    
+    printf("Forward, you must go\n");
+    motor(0, 33);
+    motor(3, 31);
+    msleep(7500);
+    
+    printf("whooooooooo we're done\n");
+    motor(0, 0);
+    motor(3, 0);
+    msleep(1000);
     return 0;
 }

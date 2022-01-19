@@ -1,4 +1,4 @@
-finish#include <kipr/botball.h>
+#include <kipr/botball.h>
 
 int main()
 {
@@ -62,7 +62,7 @@ printf("pause on line d\n");
     motor(3,0);
     msleep(2000);      
     
-printf("forword to finish\n");
+printf("forword to finish d\n");
     motor(0,42);
     motor(3,40);
     msleep(6000);   

@@ -2,10 +2,10 @@
 
 int main()
 {
-printf("Hello World\n");
-motor(0, 40);
+printf("straight\n");
+motor(0, 35);
 motor(3, 40);
-msleep(1000);
+msleep(10000);
 
 motor(0, -40);
 motor(3, -40);

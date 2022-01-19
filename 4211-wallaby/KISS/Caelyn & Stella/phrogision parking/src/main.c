@@ -2,6 +2,8 @@
 
 int main()
 {
+    //Place Tai (AKA 4211 Wallaby) on g1
+    
     printf("Go forward =D\n");
     motor(0, 35);
     motor(3, 40);
@@ -73,9 +75,18 @@ int main()
     msleep(1500);
     
     printf(" HiyathereIexistlet'sgoforwardshallwe?\n");
-    motor(0, 35);
-    motor(3, 30);
-    msleep(8000);
+    motor(0, 30);
+    motor(3, 31);
+    msleep(7500);
     
+    printf("break. now. i will make you speak in lowercase.\n");
+    motor(0, 0);
+    motor(3, 0);
+    msleep(1600);
+    
+    printf(" just turn left bruh\n");
+    motor(0, 40);
+    motor(3, 0);
+    msleep(3000);
     return 0;
 }

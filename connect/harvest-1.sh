@@ -1,6 +1,8 @@
 #!/bin/bash
 # chmod +x harvest-1.sh
 
+# If configured in VS Code, execute this script with F5.
+
 # Declare names of Wallaby links (ie, their SSIDs).
 #   To avoid storing passwords in code, initially connect to each Wallaby (manually).
 #   Make sure the password is saved on your machine, so future connections won't require them.
@@ -8,11 +10,11 @@
 #   Or temporarily comment out the Wallaby in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  # "1395-wallaby"  # 3: M
-  # "1397-wallaby"  # 4: A & C
+  "1395-wallaby"  # 3: M
+  "1397-wallaby"  # 4: A & C
   "1399-wallaby"  # 4: A
-  # "1407-wallaby"  # 6: A & W
-  # "2488-wallaby"  # 3: B & R
+  "1407-wallaby"  # 6: A & W
+  "2488-wallaby"  # 3: B & R
   "2494-wallaby"  # 5: A & A
   "4211-wallaby"  # 5: C & S
   # "1408-wallaby"  # 4:

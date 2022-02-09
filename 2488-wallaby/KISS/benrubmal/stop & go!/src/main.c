@@ -35,12 +35,12 @@ printf("pause on line b\n");
 printf("forword past line b\n");
     motor(0,42);
     motor(3,40);
-    msleep(2000);              
+    msleep(2250);              
     
     printf("turn to face line c\n");
     motor(0,42);
     motor(3,-40);
-    msleep(7100);   
+    msleep(7250);   
     
 printf("forword to line c\n");
     motor(0,40);

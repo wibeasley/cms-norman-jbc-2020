@@ -3,6 +3,7 @@
 int main()
 {
     //Place Tai (AKA 4211 Wallaby) on g1 or j1
+    //Completed
     
     printf("Go forward =D\n");
     motor(0, 35);

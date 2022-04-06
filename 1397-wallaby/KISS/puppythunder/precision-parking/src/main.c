@@ -26,7 +26,7 @@ int main()
     printf("pivot right to blue box\n");
     motor(0, 30);
     motor(3, 0 * right_adjustment);
-    msleep(2000);
+    msleep(1500);
 
     return 0;  //This should be the final line of the fx.
 }

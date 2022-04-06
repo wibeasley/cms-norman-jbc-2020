@@ -15,11 +15,16 @@ int main()
     printf("spin\n");
     motor(0,-40);
     motor(3,40);
-    msleep(5000);
+    msleep(6000);
     
     printf("tag\n");
     motor(0,40);
     motor(3,40);
-    msleep(25000);
+    msleep(20000);
+    
+    printf("run\n");
+    motor(0,-40);
+    motor(3,-40);
+    msleep(20000);
     return 0;
 }

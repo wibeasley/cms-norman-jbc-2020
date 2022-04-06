@@ -11,12 +11,12 @@
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
   # "1395-wallaby"  # 3: M
-  # "1397-wallaby"  # 4: A & C
-  # "1399-wallaby"  # 4: A
-  # "1407-wallaby"  # 6: A & W
+  # # "1397-wallaby"  # 4: A & C
+  # # "1399-wallaby"  # 4: A
+  "1407-wallaby"  # 6: A & W
   # "2488-wallaby"  # 3: B & R
   # "2494-wallaby"  # 5: A & A
-  "4211-wallaby"  # 5: C & S
+  # "4211-wallaby"  # 5: C & S
   # "1408-wallaby"  # 4:
   # "2486-wallaby"  # 3: 
 )
@@ -25,7 +25,7 @@ bot_ssids=(
 # network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
 network_ssid="Childrens-Pri-1"
-use_wifi=true
+# use_wifi=true
 use_wifi=false
 
 if [ "$use_wifi" = true ] ; then

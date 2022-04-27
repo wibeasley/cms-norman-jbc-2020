@@ -10,8 +10,10 @@ void move(char message[],double power_left,double power_right, double seconds) {
 int main()
 {
      move ("move forward",31,30,10);   
-     move ("pause",0,0,5);
+     move ("pause",0,0,2);
      move ("move backword",-31,-30,8);
-     move ("move forward",31,30,15);
+     move ("pause",0,0,2);
+     move ("move forward",31,30,12);
+     move ("turn",-31,30,1);
     return 0;
 }

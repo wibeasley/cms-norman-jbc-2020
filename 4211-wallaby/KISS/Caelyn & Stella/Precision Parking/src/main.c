@@ -10,7 +10,7 @@ int main()
 {
     move("Forward", 23, 25, 11);
     move("Back-Wards", -23, -25, 11);
-    move("Forward", 45, 40, 10);
+    move("Forward", 40, 45, 10);
     move("Slightly turn right", 0, 30, 1);
     move("Go FoRwArD", 23, 25, 1.5);
     return 0;

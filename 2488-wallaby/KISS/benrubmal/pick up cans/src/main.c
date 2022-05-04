@@ -9,26 +9,30 @@ void move(char message[],double power_left,double power_right, double seconds) {
 int main()
 {
 
-    enable_servos();
-  move ("move forward",31,30,10);
+  enable_servos();
    
+     printf("forword\n");
+    motor(0,21);
+    motor(3,20);
+    msleep(19000); 
+    
     printf("set starting position\n");
     set_servo_position(0,1000);
     msleep(1000);
     
     printf("set_ending_position\n");
-    set_servo_position(0,1500);
+    set_servo_position(0,1400);
     msleep(1000);
     
     printf("set starting position\n");
-    set_servo_position(2,1400);
-    msleep(1000);
+    set_servo_position(2,1000);
+    msleep(1500);
     
     printf("set_ending_position\n");
-    set_servo_position(2,1000);
-    msleep(1000);    
+    set_servo_position(0,1000);
+    msleep(1500);    
    
-      move ("move forward",-31,-30,10);
+      move ("move backwords",-41,-40,40);
     
     
     disable_servos();

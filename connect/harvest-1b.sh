@@ -10,15 +10,15 @@
 #   Or temporarily comment out the Wallaby in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  # "1395-wallaby"  # 3: M
-  # "1397-wallaby"  # 4: A & C
-  # "1399-wallaby"  # 4: A
-  # "1407-wallaby"  # 6: A & W
-  # "2488-wallaby"  # 3: B & R
-  # "2494-wallaby"  # 5: A & A
-  # "4211-wallaby"  # 5: C & S
-  # "1408-wallaby"  # 4:
-  "2486-wallaby"  # 3: 
+  # "1395-wallaby"  # 
+  # "1397-wallaby"  # 
+  # "1399-wallaby"  # 
+  # "1407-wallaby"  # 4: E & E
+  # "2488-wallaby"  # 
+  "2494-wallaby"  # 
+  # "4211-wallaby"  # 
+  # "1408-wallaby"  # 
+  # "2486-wallaby"  # 4: E & M & R
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
@@ -26,7 +26,7 @@ bot_ssids=(
 # network_ssid="State Fair Free"
 network_ssid="Classen-Two 2.4"
 use_wifi=true
-# use_wifi=false
+use_wifi=false
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby

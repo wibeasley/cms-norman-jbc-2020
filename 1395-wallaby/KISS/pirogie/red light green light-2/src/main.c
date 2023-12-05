@@ -15,6 +15,7 @@ int main()
     move("yellow light",0,30,3);
     move("green light",40,40,0.7);
     move("red light",0,0,2);
-    move("green light",40,40,1.5);
+    move("green light",40,40,1.3);
+    move("yellow light",0,30,3);
     return 0;
 }

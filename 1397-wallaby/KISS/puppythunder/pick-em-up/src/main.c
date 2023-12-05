@@ -7,14 +7,17 @@ int main()
     
     printf("set servos\n");
     set_servo_position(0,900);
-    set_servo_position(2,900);
+    set_servo_position(2, 200);
+
 
     printf("move forward\n");
     motor(0, 30);
     motor(3, 30 * right_adjustment);
-    msleep(7500);
-    
-    
+    msleep(8500);
+   
+        
+        
+          
     
     return 0;
 }

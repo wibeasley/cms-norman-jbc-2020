@@ -10,12 +10,12 @@
 #   Or temporarily comment out the Wallaby in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  # "1395-wallaby"  # 
-  # "1397-wallaby"  # 
-  # "1399-wallaby"  # 
+  "1395-wallaby"  # 
+  "1397-wallaby"  # 
+  "1399-wallaby"  # 
   # "1407-wallaby"  # 4: E & E
   # "2488-wallaby"  # 
-  "2494-wallaby"  # 
+  # "2494-wallaby"  # 8: A & E 
   # "4211-wallaby"  # 
   # "1408-wallaby"  # 
   # "2486-wallaby"  # 4: E & M & R
@@ -26,7 +26,7 @@ bot_ssids=(
 # network_ssid="State Fair Free"
 network_ssid="Classen-Two 2.4"
 use_wifi=true
-use_wifi=false
+# use_wifi=false
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby

@@ -16,17 +16,17 @@ bot_ssids=(
   # "1407-wallaby"  # 6: A & W
   # "2488-wallaby"  # 3: B & R
   # "2494-wallaby"  # 5: A & A
-  "4211-wallaby"  # 5: C & S
+  # "4211-wallaby"  # 5: C & S
   # "1408-wallaby"  # 4:
-  # "2486-wallaby"  # 3: 
+  "2486-wallaby"  # 3: 
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
 # network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
-network_ssid="Childrens-Pri-1"
+network_ssid="Classen-Two 2.4"
 use_wifi=true
-use_wifi=false
+# use_wifi=false
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby
@@ -64,7 +64,9 @@ do
   fi
 
   echo "Attempting to download files from $i over $url."
-  scp -r root@$url:'~/Documents/KISS/' ./$i/
+  scp -rO root@$url:'~/Documents/KISS/' ./$i/
+
+  #TODO: replace scp with rsync?  https://unix.stackexchange.com/questions/709613/ssh-working-on-all-devices-but-scp-from-some-devices-gives-connection-closed-e
   #if [ "$use_wifi" = true ] ; then
   #  scp -r root@192.168.125.1:'~/Documents/KISS/' ./$i/
   #else

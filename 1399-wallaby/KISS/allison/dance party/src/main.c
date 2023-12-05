@@ -29,12 +29,12 @@ int main()
     motor(0, -20);
     motor(3,  20);
     msleep(3000);
- printf("pivot left\n");
+ printf("pivot right\n");
     motor(0,-20);
     motor(3,20);
     msleep(3000);
     
-    
+    printf("move forward"0
     
     
     return 0;

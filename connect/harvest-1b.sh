@@ -12,14 +12,13 @@
 bot_ssids=(
   # "1395-wallaby"  # 8: A & C
   # "1397-wallaby"  # 8: A & G
-  "1399-wallaby"  # 
   # "1407-wallaby"  # 4: E & E
   # "2488-wallaby"  # 6: A & R & R
   # "2494-wallaby"  # 8: A & E 
-  "4211-wallaby"  # 
-  "1408-wallaby"  # 
   # "2486-wallaby"  # 4: E & M & R
+  "1399-wallaby"  # unassigned
   # "1408-wallaby"  # unassigned
+  # "4211-wallaby"  # unassigned
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
@@ -27,7 +26,7 @@ bot_ssids=(
 # network_ssid="State Fair Free"
 network_ssid="Classen-Two 2.4"
 use_wifi=true
-# use_wifi=false
+use_wifi=false
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby

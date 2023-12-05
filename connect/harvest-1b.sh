@@ -17,7 +17,7 @@ bot_ssids=(
   # "2494-wallaby"  # 8: A & E 
   # "2486-wallaby"  # 4: E & M & R
   # "1399-wallaby"  # unassigned - usb
-  "1408-wallaby"  # unassigned
+  "1408-wallaby"  # unassigned - usb
   # "4211-wallaby"  # unassigned - does not boot
 )
 

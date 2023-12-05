@@ -16,9 +16,9 @@ bot_ssids=(
   # "2488-wallaby"  # 6: A & R & R
   # "2494-wallaby"  # 8: A & E 
   # "2486-wallaby"  # 4: E & M & R
-  "1399-wallaby"  # unassigned
-  # "1408-wallaby"  # unassigned
-  # "4211-wallaby"  # unassigned
+  # "1399-wallaby"  # unassigned - usb
+  "1408-wallaby"  # unassigned
+  # "4211-wallaby"  # unassigned - does not boot
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com

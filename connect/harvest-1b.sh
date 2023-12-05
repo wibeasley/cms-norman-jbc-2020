@@ -10,15 +10,16 @@
 #   Or temporarily comment out the Wallaby in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  "1395-wallaby"  # 
-  "1397-wallaby"  # 
+  # "1395-wallaby"  # 8: A & C
+  # "1397-wallaby"  # 8: A & G
   "1399-wallaby"  # 
   # "1407-wallaby"  # 4: E & E
-  # "2488-wallaby"  # 
+  # "2488-wallaby"  # 6: A & R & R
   # "2494-wallaby"  # 8: A & E 
-  # "4211-wallaby"  # 
-  # "1408-wallaby"  # 
+  "4211-wallaby"  # 
+  "1408-wallaby"  # 
   # "2486-wallaby"  # 4: E & M & R
+  # "1408-wallaby"  # unassigned
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com

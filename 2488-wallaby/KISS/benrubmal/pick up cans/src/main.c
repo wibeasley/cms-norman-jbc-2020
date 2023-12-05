@@ -14,22 +14,18 @@ int main()
      printf("forword\n");
     motor(0,21);
     motor(3,20);
-    msleep(19000); 
+    msleep(10000); 
     
     printf("set starting position\n");
-    set_servo_position(0,1000);
-    msleep(1000);
+    set_servo_position(1,1000);
+    msleep(1800);
+    
+    printf("set starting position\n");
+    set_servo_position(2,1500);
+    msleep(2000);
     
     printf("set_ending_position\n");
-    set_servo_position(0,1400);
-    msleep(1000);
-    
-    printf("set starting position\n");
     set_servo_position(2,1000);
-    msleep(1500);
-    
-    printf("set_ending_position\n");
-    set_servo_position(0,1000);
     msleep(1500);    
    
       move ("move backwords",-41,-40,40);

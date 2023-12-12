@@ -4,8 +4,7 @@ from wallaby import *
 
 def main():
   enable_servos()
-  set_servo_position(1, 300)
-  set_servo_position(0, -600)
+  set_servo_position(1,-10)
   print "Please Work"
   msleep(2000)
     

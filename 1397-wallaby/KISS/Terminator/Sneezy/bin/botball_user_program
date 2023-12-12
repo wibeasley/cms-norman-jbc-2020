@@ -11,20 +11,17 @@ def main():
     msleep(500)    
     
     motor(0,40)
-    motor(1,40)
-    msleep(3000)
+    motor(3,40)
+    msleep(5000)
         
+    set_servo_position(1,1200)    
     set_servo_position(0,-300)    
-    set_servo_position(1,30)    
-    msleep(300)    
+    msleep(600) 
         
-    set_servo_position(0,20)    
-    msleep(300)
-        
-    motor(0,40)
-    motor(1,40)
-    msleep(3000)    
-    
+    set_servo_position(0,20) 
+    motor(0,-40)
+    motor(3,-40)
+    msleep(5000) 
 
 
 if __name__== "__main__":

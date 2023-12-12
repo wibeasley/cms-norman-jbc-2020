@@ -33,7 +33,7 @@ Helpful Links:
     1. No uppercase letters, spaces, underscores, or special characters like exclamation points.
     1. No abbreviations.
     1. No grammatical mistakes.
-1. use `printf()` statements liberally
+1. use `print()` statements liberally
     1. at the top of execution, display the project name.  This reduces the chance that someone repeatedly executes the wrong program.  For example "tag-your-it" *vs* "tag-you-are-it".
     1. at the top of execution, display the robot's starting position on the mat.  (Ideally the position of the vertical black lego attached great the front of the robot.) For example, "B, -3".
     1. at the top of each "chunk" of code, display the chunk's intent.  For example, "go straight", "turn left", "raise vertical servo", "close claw", "push cans back"...
@@ -41,7 +41,7 @@ Helpful Links:
 
 ## Troubleshooting Tips
 
-1. use `printf()` statements to isolate the problematic behavior.
+1. use `print()` statements to isolate the problematic behavior.
 1. check power for laptop & robot.
 1. check connectivity with ping (see above).
 1. check the program is saving & compiling correctly.
@@ -60,40 +60,40 @@ Helpful Links:
 1. avoid more then 40% power to wheel motors<br/>
 (*ie* `motor(0, 45);` is too fast).
 1. Avoid switching motor directions abruptly. Pad with
-    ```c
-    printf("Pause movement\n");
-    motor(0, 0);
-    motor(3, 0);
-    msleep(500);
+    ```python
+    print("Pause movement")
+    motor(0, 0)
+    motor(3, 0)
+    msleep(500)
     ```
 
     So instead of this jerky code:
 
-    ```c
-    printf("Move forward.\n");
-    motor(0,  40);
-    msleep(500);
-    printf("Move backward.\n");
-    motor(0, -40);
-    msleep(500);
+    ```python
+    print("Move forward.")
+    motor(0,  40)
+    msleep(500)
+    print("Move backward.")
+    motor(0, -40)
+    msleep(500)
     ```
+
 
     Include a pause like:
 
-    ```c
-    printf("Move forward.\n");
-    motor(0,  40);
-    msleep(500);
+    ```python
+    print("Move forward.")
+    motor(0,  40)
+    msleep(500)
 
-    printf("Pause movement\n");
-    motor(0, 0);
-    motor(3, 0);
-    msleep(500);
+    print("Pause movement")
+    motor(0, 0)
+    motor(3, 0)
+    msleep(500)
 
-    printf("Move backward.\n");
-    motor(0, -40);
-    msleep(500);
-    ```
+    print("Move backward.")
+    motor(0, -40)
+    msleep(500)
 
 
 1. servos arms should be 'aligned' and never hit resistance.

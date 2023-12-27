@@ -22,7 +22,7 @@
     1. source location of user files.  If blank, default to `~/Documents/KISS/Default User/`.  If one Wallaby has *k* users, the configuration file should have *k* different entries.
     1. destination location of user files.  This field is required.
     1. IP address.  If blank, default to `192.168.125.1`.
-    1. Boolean value indicating if the Wallaby shold be backed up.  The toggle makes it easy to exclude a machine (*e.g.*, for being temporarily out of service) so time is not wasted trying to connect to it.    
+    1. Boolean value indicating if the Wallaby shold be backed up.  The toggle makes it easy to exclude a machine (*e.g.*, for being temporarily out of service) so time is not wasted trying to connect to it.
     1. Controller version (*e.g.*, 'Wallaby v23') so theoretically it could accommodate institutions that have a heterogenous fleet (even beyond Wallabies in the future).
     1. File transfer protocol.  If blank, default to 'scp'; possibly support rsync in the future.
 1. If one SSID/Link has multiple users, nest them all in a single `nmcli` call, to be more efficient.  Let the program figure out how to bunch the users within one nmcli call.  Keep the configuration file normalized (in the database sense of 'normalized').
@@ -40,13 +40,13 @@
     1. Wi-Fi strength/health of each Wallaby.
     1. Number of users (and their number of programs) for each Wallaby.
     1. Code health or code complexity (*e.g.*, [lizard](https://github.com/terryyin/lizard)) of each program.
-1. Destination of backups, such as AWS S3.  Like Git/GitHub, you can easily [cached your credentials](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) so nothing is stored in the configuration file.  Ideally this location is in the cloud, so the backup utility runs just as easily at competitions as at the home institutions during class.  
+1. Destination of backups, such as AWS S3.  Like Git/GitHub, you can easily [cached your credentials](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) so nothing is stored in the configuration file.  Ideally this location is in the cloud, so the backup utility runs just as easily at competitions as at the home institutions during class.
 
 1. However, I would still advocate GitHub.
     1. It is easy to turn back the clock to any commit, even if it was months ago.  Especially with [SourceTree](https://www.sourcetreeapp.com/).
     1. The previous code versions can be accessed through the browser (on GitHub.com), or form the backup machine.
     1. It is probably easier to manage the connections.  You can run commits every ~10 minutes (when you're connecting only to the Wallabies, and you're not on the internet).  Every ~1 hour, connect to the internet, and push the 6 commits to the central GitHub server.
-    1. Private repositories are [free for schools](https://education.github.com/), for those institutions who care about being scooped.  
+    1. Private repositories are [free for schools](https://education.github.com/), for those institutions who care about being scooped.
 1. In addition to writing to the `.logs/` directory, write to a SQLite database.  That would make the real-time report much easier to generate.
 
 ## Current Limitations
@@ -54,3 +54,16 @@
 
 1. This only backs up code.  It lacks an automated way to recover code.  If disaster strikes, it is probably easiest to let the student browse the code on GitHub.com.
 1. Even w/ a private repository, everyone at a school can see the code for everyone else.  But if this is a probablem, do not give any student access to the repository.  You would have to be by them when the look through and download old versions.
+
+## Setup
+
+1. Create a single ssh private/public key pair following
+  [this tutorial](https://upcloud.com/resources/tutorials/use-ssh-keys-authentication).
+
+   ```sh
+   ssh-keygen -t rsa
+   cd /home/wibeasley/.ssh
+   ssh-copy-id -i id_rsa.pub kipr@192.168.125.1
+   ssh-agent $BASH
+   ssh-add id_rsa
+   ```

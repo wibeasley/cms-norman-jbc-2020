@@ -1,15 +1,16 @@
 #!/bin/bash
-# chmod +x harvest-1.sh
+# chmod +x harvest-1b.sh
 
 # If configured in VS Code, execute this script with F5.
 
-# Declare names of Wallaby links (ie, their SSIDs).
-#   To avoid storing passwords in code, initially connect to each Wallaby (manually).
+# Declare names of wombat/wallaby robots (ie, their SSIDs).
+#   To avoid storing passwords in code, initially connect to each robot (manually).
 #   Make sure the password is saved on your machine, so future connections won't require them.
-#   If a wallaby is missing or out of range, the script will skip over it after the nmcli times out.
-#   Or temporarily comment out the Wallaby in the array below.
+#   If a robot is missing or out of range, the script will skip over it after the nmcli times out.
+#   Or temporarily comment out the robots in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
+  "4054-wooo"
   "4054-wombat"
   "1395-wallaby"  # 8: A & C
   # "1397-wallaby"  # 4/5: E & C
@@ -31,14 +32,14 @@ use_wifi=true
 pattern_bot="^[0-9]{4,5}-(\w+)$"
 
 if [ "$use_wifi" = true ] ; then
-  url="192.168.125.1"  # For wifi connections to wallaby
+  url="192.168.125.1"  # For wifi connections to all robots
 else
-  url="192.168.124.1"  # For usb connection to any wallaby
+  url="192.168.124.1"  # For usb connection to any specific robot
 fi
 echo "url: $url; (use_wifi: $use_wifi)"
 #url="23.208.224.170" # For debugging (ie, cisco.com)
 
-echo "Looping over ${#bot_ssids[@]} Wallabies"
+echo "Looping over ${#bot_ssids[@]} robots"
 for i in "${bot_ssids[@]}"
 do
   echo "------------------------------------------"
@@ -54,6 +55,9 @@ do
   elif  [ "$model" = "wallaby" ] ; then
     echo "Model: wallaby"
     name="root"
+  else
+    echo "Model ""$model"" not recognized.  Skipping to the next robot"
+    continue    # Proceed to the next robot.
   fi
 
   if [ "$use_wifi" = true ] ; then
@@ -63,7 +67,7 @@ do
 
     if [[ $nmcli_return -ne 0 ]] ; then
       echo "Wifi connection failed; host $i not currently reachable apparently."
-      continue    # Proceed to the next Wallaby.
+      continue    # Proceed to the next robot.
     fi
   fi
 
@@ -74,7 +78,7 @@ do
 
   if [[ $ping_return -ne 0 ]] ; then
     echo "Ping failed; host $i not currently reachable on $url."
-    continue    # Proceed to the next Wallaby.
+    continue    # Proceed to the next robot.
   fi
 
   echo "Attempting to download files from $i over $url."
@@ -99,7 +103,7 @@ do
 done
 
 echo "========================================="
-echo "Completed loop over ${#bot_ssids[@]} Wallabies"
+echo "Completed loop over ${#bot_ssids[@]} robots"
 
 #echo "Git add & commit"
 git add -A
@@ -114,19 +118,17 @@ echo "Network status to [${network_ssid}]: $? (hint: a zero indicates a successf
 # TODO:
 # * if nmcli fails, try USB automatically
 # * yaml config file that
-#     * stores Wallaby names (instead of a global variable included at the top of the script)
-#     * contains a boolean flag if it should be attempted (if only 4 out of the school's Wallabies are being used, don't bother polling the other three in the closet)
-#     * indicates the users on each Wallaby (instead of backing up only `Default User`)
+#     * stores robot names (instead of a global variable included at the top of the script)
+#     * contains a boolean flag if it should be attempted (if only 4 out of the school's robots are being used, don't bother polling the other three in the closet)
 #     * stores the SSID of a network w/ an internet connection (eg, the school's) so the `git push` is effective.
 #         * indicate in the yaml whether it should connect & push after backing up.
 #     * default message in the git commits
 #        * (Should this be dynamic?)
-# * outputs a temporary text file that indicates how long it's been since each Wallaby has been successfully backed up.
-#     * this allows the teacher to merely glance at which Wallabies need attention.
+# * outputs a temporary text file that indicates how long it's been since each robot has been successfully backed up.
+#     * this allows the teacher to merely glance at which robot need attention.
 
 # Manual restore over USB
 #scp -r ~/Documents/kipr/cms-norman-jbc-2020/2488-wallaby/ root@192.168.124.1:'~/Documents/KISS/'
-
 
 # Manual update over USB
 # scp -r root@192.168.124.1:'~/Documents/KISS/' ~/Documents/kipr/cms-norman-jbc-2020/1397-wallaby/
@@ -134,7 +136,7 @@ echo "Network status to [${network_ssid}]: $? (hint: a zero indicates a successf
 # Manual update over wifi
 # scp -r root@192.168.125.1:'~/Documents/KISS/' ~/Documents/kipr/cms-norman-jbc-2020/1397-wallaby/
 
-# Clean up a Wallaby's user file
+# Clean up a robot's user file
 # 1) ssh root@192.168.125.1
 # 2) nano ~/Documents/KISS/users.json
 

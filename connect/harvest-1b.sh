@@ -10,23 +10,25 @@
 #   Or temporarily comment out the Wallaby in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
+  "4054-wombat"
   "1395-wallaby"  # 8: A & C
-  "1397-wallaby"  # 4/5: E & C
-  "1407-wallaby"  # 4: E & E
-  "2488-wallaby"  # 6: A & E & R
-  "2494-wallaby"  # 8: A & E 
-  "2486-wallaby"  # 3: E & H & R
-  "1399-wallaby"  # 3: P & P & R
+  # "1397-wallaby"  # 4/5: E & C
+  # "1407-wallaby"  # 4: E & E
+  # "2488-wallaby"  # 6: A & E & R
+  # "2494-wallaby"  # 8: A & E
+  # "2486-wallaby"  # 3: E & H & R
+  # "1399-wallaby"  # 3: P & P & R
   # "1408-wallaby"  # unassigned - usb
   # "4211-wallaby"  # unassigned - does not boot
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
-# network_ssid="BeasleyGuest2"
+network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
-network_ssid="Classen-Two 2.4"
+# network_ssid="Classen-Two 2.4"
 use_wifi=true
 # use_wifi=false
+pattern_bot="^[0-9]{4,5}-(\w+)$"
 
 if [ "$use_wifi" = true ] ; then
   url="192.168.125.1"  # For wifi connections to wallaby
@@ -41,6 +43,18 @@ for i in "${bot_ssids[@]}"
 do
   echo "------------------------------------------"
   echo "Attempting to connect to $i."
+
+  [[ $i =~ $pattern_bot ]]
+
+  model=${BASH_REMATCH[1]}
+
+  if [ "$model" = "wombat" ] ; then
+    echo "Model: wombat"
+    name="kipr"
+  elif  [ "$model" = "wallaby" ] ; then
+    echo "Model: wallaby"
+    name="root"
+  fi
 
   if [ "$use_wifi" = true ] ; then
     nmcli con up "$i"
@@ -64,7 +78,7 @@ do
   fi
 
   echo "Attempting to download files from $i over $url."
-  scp -rO root@$url:'~/Documents/KISS/' ./$i/
+  scp -rO $name@$url:'~/Documents/KISS/' ./$i/
 
   #TODO: replace scp with rsync?  https://unix.stackexchange.com/questions/709613/ssh-working-on-all-devices-but-scp-from-some-devices-gives-connection-closed-e
   #if [ "$use_wifi" = true ] ; then

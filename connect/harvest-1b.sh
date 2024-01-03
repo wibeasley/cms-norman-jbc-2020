@@ -12,7 +12,7 @@
 bot_ssids=(
   "4044-wombat"
   "4045-wombat"
-  # "4054-wombat"
+  "4054-wombat"
   # "1395-wallaby"  # 8: A & C
   # "1397-wallaby"  # 4/5: E & C
   # "1407-wallaby"  # 4: E & E

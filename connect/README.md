@@ -68,6 +68,7 @@
 
 1. Create a single ssh private/public key pair following
   [this tutorial](https://upcloud.com/resources/tutorials/use-ssh-keys-authentication).
+  {I think this step is now unnecessary.}
 
    ```sh
    ssh-keygen -t rsa
@@ -76,3 +77,6 @@
    ssh-agent $BASH
    ssh-add id_rsa
    ```
+
+1. Replace the content of the [password.txt](password.txt) file with the appropriate password.
+   The password won't be written to the repo, because the file was added to .gitignore and then [the index was updated](https://stackoverflow.com/a/7054175/1082435).

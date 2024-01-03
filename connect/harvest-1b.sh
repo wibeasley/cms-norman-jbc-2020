@@ -10,8 +10,10 @@
 #   Or temporarily comment out the robots in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  "4054-wombat"
-  "1395-wallaby"  # 8: A & C
+  "4044-wombat"
+  "4045-wombat"
+  # "4054-wombat"
+  # "1395-wallaby"  # 8: A & C
   # "1397-wallaby"  # 4/5: E & C
   # "1407-wallaby"  # 4: E & E
   # "2488-wallaby"  # 6: A & E & R

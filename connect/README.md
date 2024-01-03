@@ -57,6 +57,15 @@
 
 ## Setup
 
+1. Flash Wombat OS if necessary,
+   following [KIPR's instructions](https://www.kipr.org/kipr/hardware-software/kipr-wombat-firmware).
+   To open Balena Etcher from the bash/Linux command line:
+
+    ```sh
+    ./balenaEtcher-1.*-x64.AppImage
+    ```
+
+
 1. Create a single ssh private/public key pair following
   [this tutorial](https://upcloud.com/resources/tutorials/use-ssh-keys-authentication).
 

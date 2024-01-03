@@ -83,7 +83,14 @@ do
   fi
 
   echo "Attempting to download files from $i over $url."
-  scp -rO $name@$url:'~/Documents/KISS/' ./$i/
+  if [ "$model" = "wombat" ] ; then
+    sshpass -f "password.txt" scp -rO $name@$url:'~/Documents/KISS/' ./$i/
+  elif  [ "$model" = "wallaby" ] ; then
+    scp -rO $name@$url:'~/Documents/KISS/' ./$i/
+  else
+    echo "Model ""$model"" not recognized.  Skipping to the next robot"
+    continue    # Proceed to the next robot.
+  fi
 
   #TODO: replace scp with rsync?  https://unix.stackexchange.com/questions/709613/ssh-working-on-all-devices-but-scp-from-some-devices-gives-connection-closed-e
   #if [ "$use_wifi" = true ] ; then

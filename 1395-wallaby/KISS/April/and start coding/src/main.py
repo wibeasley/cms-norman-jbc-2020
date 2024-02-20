@@ -10,7 +10,9 @@ def main():
   msleep(4000)
         
  
-     
+  motor(0,-30)
+  motor(3,30)
+  msleep(1500)     
       
       
 

@@ -29,7 +29,7 @@ bot_ssids=(
 # network_ssid="State Fair Free"
 network_ssid="Classen-Two 2.4"
 use_wifi=true
-# use_wifi=false
+use_wifi=false
 pattern_bot="^[0-9]{4,5}-(\w+)$"
 
 if [ "$use_wifi" = true ] ; then

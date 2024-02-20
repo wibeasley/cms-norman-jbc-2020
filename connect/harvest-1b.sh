@@ -12,10 +12,10 @@
 bot_ssids=(
   # "4044-wombat"
   # "4045-wombat"
-  "4054-wombat"
+  # "4054-wombat"
   # "1395-wallaby"  # 5: E & E
   # "1397-wallaby"  # 4/5: E & C
-  # "2488-wallaby"  # 6: A & E & R
+  "2488-wallaby"  # 6: A & E & R
   # "2494-wallaby"  # 8: A & E
   # "2486-wallaby"  # 3: E & H & R
   # "1399-wallaby"  # 3: P & P & R
@@ -29,7 +29,7 @@ bot_ssids=(
 # network_ssid="State Fair Free"
 network_ssid="Classen-Two 2.4"
 use_wifi=true
-# use_wifi=false
+use_wifi=false
 pattern_bot="^[0-9]{4,5}-(\w+)$"
 
 if [ "$use_wifi" = true ] ; then

@@ -24,6 +24,6 @@ def main():
 	print("run back home or else the boogieman will get you")
 	k.motor(0, 41)
 	k.motor(3, 40)
-	k.msleep(8000)
+	k.msleep(10000)
     
 main()

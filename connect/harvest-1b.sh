@@ -10,24 +10,24 @@
 #   Or temporarily comment out the robots in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  "4044-wombat"
-  "4045-wombat"
-  "4054-wombat"
-  # "1395-wallaby"  # 8: A & C
+  # "4044-wombat"
+  # "4045-wombat"
+  # "4054-wombat"
+  "1395-wallaby"  # 5: E & E
   # "1397-wallaby"  # 4/5: E & C
-  # "1407-wallaby"  # 4: E & E
   # "2488-wallaby"  # 6: A & E & R
   # "2494-wallaby"  # 8: A & E
   # "2486-wallaby"  # 3: E & H & R
   # "1399-wallaby"  # 3: P & P & R
-  # "1408-wallaby"  # unassigned - usb
+  # "1408-wallaby"  # 4/5: R & M
+  # "1407-wallaby"  # unassigned - servo ports don't work
   # "4211-wallaby"  # unassigned - does not boot
 )
 
 # The wifi network connected to the outside world. Necessary if commits are pushed to GitHub.com
-network_ssid="BeasleyGuest2"
+# network_ssid="BeasleyGuest2"
 # network_ssid="State Fair Free"
-# network_ssid="Classen-Two 2.4"
+network_ssid="Classen-Two 2.4"
 use_wifi=true
 # use_wifi=false
 pattern_bot="^[0-9]{4,5}-(\w+)$"

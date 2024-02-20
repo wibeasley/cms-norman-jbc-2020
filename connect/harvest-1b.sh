@@ -14,12 +14,12 @@ bot_ssids=(
   # "4045-wombat"
   # "4054-wombat"
   # "1395-wallaby"  # 5: E & E
-  "1397-wallaby"  # 4/5: E & C
+  # "1397-wallaby"  # 4/5: E & C
   # "2488-wallaby"  # 6: A & E & R
   # "2494-wallaby"  # 8: A & E
   # "2486-wallaby"  # 3: E & H & R
   # "1399-wallaby"  # 3: P & P & R
-  # "1408-wallaby"  # 4/5: R & M
+  "1408-wallaby"  # 4/5: R & M
   # "1407-wallaby"  # unassigned - servo ports don't work
   # "4211-wallaby"  # unassigned - does not boot
 )

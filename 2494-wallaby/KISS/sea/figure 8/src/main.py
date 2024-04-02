@@ -5,6 +5,8 @@ from wallaby import *
 def main():
     print "Hello World"
     
+    B - 1    
+        
     print "go forward 1"        
     motor(3,30) 
     motor(0,30)

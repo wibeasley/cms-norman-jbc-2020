@@ -37,7 +37,7 @@ def main():
     motor(0,50)
     motor(3,0)
     msleep(500)
-  print "THEEE BAAAACCKK TWWWWIIIIIIIISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSTTTTTTTTTTTTTTT!!!!!!"
+  print "THE BACK TWIST!"
   for x in range(10):
     set_servo_position(1,-100)
     set_servo_position(0,-400)

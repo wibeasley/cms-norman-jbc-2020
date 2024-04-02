@@ -5,6 +5,8 @@ from wallaby import *
 def main():
     print "tag your it"
 
+    G - 5    
+        
         
     print "go forward"
     motor(3,30)    

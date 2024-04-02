@@ -26,6 +26,41 @@ def main():
     motor(3,33)    
     msleep(7000)    
         
+    motor(0,-30)    
+    motor(3,-33)    
+    msleep(2000)    
+    
+    motor(0,30)    
+    motor(3,00)    
+    msleep(1500)
+        
+    motor(0,30)    
+    motor(3,33)    
+    msleep(7250)    
+        
+    motor(0,00)    
+    motor(3,32)    
+    msleep(2250)    
+        
+    motor(0,30)    
+    motor(3,33)    
+    msleep(7300)
+        
+    motor(0,00)    
+    motor(3,32)    
+    msleep(2500)    
+        
+    motor(0,30)    
+    motor(3,33)    
+    msleep(9700)
+        
+    motor(0,00)    
+    motor(3,32)    
+    msleep(2500)    
+        
+    motor(0,30)    
+    motor(3,33)    
+    msleep(5000)    
         
         
 if __name__== "__main__":

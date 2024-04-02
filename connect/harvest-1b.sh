@@ -13,14 +13,14 @@ bot_ssids=(
   # "4044-wombat"
   # "4045-wombat"
   # "4054-wombat"   # 5: E & R
-  # "1395-wallaby"  # 5: E & E
-  # "1397-wallaby"  # 4/5: E & C
-  # "2488-wallaby"  # 6: A & E & R
-  # "2494-wallaby"  # 8: A & E
-  # "2486-wallaby"  # 3: E & H & R
-  # "1399-wallaby"  # 3: P & P & R
-  # "1408-wallaby"  # 4/5: R & M
-  "1407-wallaby"  # unassigned - servo ports don't work
+  "1395-wallaby"  # 5: E & E
+  "1397-wallaby"  # 4/5: E & C
+  "2488-wallaby"  # 6: A & E & R
+  "2494-wallaby"  # 8: A & E
+  "2486-wallaby"  # 3: E & H & R
+  "1399-wallaby"  # 3: P & P & R
+  "1408-wallaby"  # 4/5: R & M
+  # "1407-wallaby"  # unassigned - servo ports don't work
   # "4211-wallaby"  # unassigned - does not boot
 )
 
@@ -151,3 +151,4 @@ echo "Network status to [${network_ssid}]: $? (hint: a zero indicates a successf
 # References:
 # - https://stackoverflow.com/questions/26824596/how-can-i-pipe-the-hostname-into-a-call-to-ssh
 # - https://stackoverflow.com/questions/6118948/bash-loop-ping-successful
+# https://serverfault.com/a/951352/503195

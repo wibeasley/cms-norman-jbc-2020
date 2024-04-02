@@ -10,17 +10,33 @@ def main():
     "go forward"    
     motor(0,30)    
     motor(3,30)    
-    msleep(11000)    
+    msleep(12000)    
         
         
     "pivot"    
+    motor(0,-30)    
+    motor(3,30)    
+    msleep(2000)    
+        
+        
+    "go forward"   
+    motor(0,30)  
+    motor(3,30)    
+    msleep(6000)    
+        
+                           
+    "pivot"    
+    motor(0,-30) 
+    motor(3,30)    
+    msleep(1900)    
+        
+    
+    "go forward"    
     motor(0,30)    
-    motor(3,-30)    
-    msleeep(2000)    
+    motor(3,30)    
+    msleep(11000)    
         
         
-        
-      
         
         
         

@@ -3,7 +3,6 @@ import os, sys
 sys.path.append("/usr/lib")
 import _kipr as k
 
-
 # dim values are ~4000; bright values are ~2500
 threshold = 50
 
@@ -31,51 +30,62 @@ def main():
 
 
   k.enable_servos() ;
+  
+  k.motor(0,100)
+  k.motor(3,100)
+  k.msleep(10000)
+  
+  k.motor(0,100)
+  k.motor(3,0)
+  k.msleep(1300)
+  
+  k.motor(0,100)
+  k.motor(3,100)
+  k.msleep(3000)
+  
+  k.motor(0,100)
+  k.motor(3,0)
+  k.msleep(1300)
     
   k.motor(0,100)
   k.motor(3,100)
-  k.msleep(5000)
+  k.msleep(2000)
+
+  k.motor(0,100)
+  k.motor(3,0)
+  k.msleep(1300)
+  
+  k.motor(0,100)
+  k.motor(3,100)
+  k.msleep(2500)
+    
+  k.motor(0,100)
+  k.motor(3,0)
+  k.msleep(1300)
+  
+  k.motor(0,100)
+  k.motor(3,100)
+  k.msleep(6000)
+  
+  k.motor(0,100)
+  k.motor(3,0)
+  k.msleep(1300)
+
+  k.motor(0,100)
+  k.motor(3,100)
+  k.motor(2500)
     
   k.motor(0,0)
   k.motor(3,90)
-  k.msleep(1500)
-    
-  k.motor(0,100)
-  k.motor(3,100)
-  k.msleep(1150)
-    
-  k.motor(0,90)
-  k.motor(3,0)
-  k.msleep(1500)
-    
-  k.motor(0,100)
-  k.motor(3,100)
-  k.msleep(1500)
+  msleep(800)
 
   k.motor(0,100)
-  k.motor(3,0)
-  k.msleep(1500)
-    
-  k.motor(0,100)
   k.motor(3,100)
-  k.msleep(1300)
-
-  k.motor(0,0)
-  k.motor(3,100)
-  k.msleep(1200)
-    
-  k.motor(0,100)
-  k.motor(3,100)
-  k.msleep(1600)
-
-  k.motor(0,100)
-  k.motor(3,0)
-  k.msleep(1200)
-    
-  k.motor(0,100)
-  k.motor(3,100)
-  k.msleep(1500)
+  k.msleep(1000)
         
   print("Ok, now I need a rest.", flush = True)
 
 main()
+
+
+

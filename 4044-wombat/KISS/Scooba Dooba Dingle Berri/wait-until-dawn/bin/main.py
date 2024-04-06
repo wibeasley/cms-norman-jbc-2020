@@ -4,7 +4,7 @@ sys.path.append("/usr/lib")
 import _kipr as k
 
 # dim values are ~4000; bright values are ~2500
-threshold = 3500
+threshold = 500
 
 def main():
   print("Starting wait-until-dawn", flush = True)

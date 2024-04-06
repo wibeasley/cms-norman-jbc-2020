@@ -8,13 +8,13 @@ def main():
         
     print "forward"
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(5000)    
     
         
     print "forward"
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(6000)    
         
         
@@ -26,7 +26,7 @@ def main():
         
     print "forward"
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(5000)
         
     
@@ -38,7 +38,7 @@ def main():
         
     print "forward"
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(11000)
     
 if __name__== "__main__":

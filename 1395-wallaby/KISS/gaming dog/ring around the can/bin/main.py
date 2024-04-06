@@ -45,9 +45,13 @@ if __name__== "__main__":
     motor(3,30)    
     msleep(3000)    
         
+    motor(0,0)    
+    motor(3,32)    
+    msleep(2500)    
         
-        
-        
+    motor(0,30)    
+    motor(3,30)    
+    msleep(8000)    
         
         
         

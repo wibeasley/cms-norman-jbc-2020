@@ -46,7 +46,7 @@ def main():
     print "forward please"    
     motor(0,37)    
     motor(3,30)    
-    msleep(5000)  
+    msleep(5500)  
         
  
     print "turn right please"    
@@ -63,6 +63,41 @@ def main():
     motor(0,-30)    
     motor(3,30)    
     msleep(1500)    
+        
+    print "forward please"    
+    motor(0,37)    
+    motor(3,30)    
+    msleep(5000)        
+        
+    print "turn left please"            
+    motor(0,35) 
+    motor(3,00)
+    msleep(3000)    
+        
+    print "forward please"    
+    motor(0,37)    
+    motor(3,30)    
+    msleep(5000)  
+        
+    print "turn left please"            
+    motor(0,35) 
+    motor(3,00)
+    msleep(3000)     
+        
+    print "forward please"    
+    motor(0,37)    
+    motor(3,30)    
+    msleep(3000)
+        
+    print "turn right please"    
+    motor(0,-30)    
+    motor(3,30)    
+    msleep(1500)
+      
+    print "forward please"    
+    motor(0,37)    
+    motor(3,30)    
+    msleep(1000)    
         
         
         

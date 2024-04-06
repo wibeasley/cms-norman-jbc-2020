@@ -32,7 +32,7 @@ def main():
     print "pivot left 1"    
     motor(0, -30)
     motor(3, 30)
-    msleep(1910)    
+    msleep(1900)    
           
         
     print "go forward"    
@@ -80,7 +80,7 @@ def main():
     print "go forward"    
     motor(0, 40)
     motor(3, 48)
-    msleep(6000)
+    msleep(5000)
     
         
     print "pivot left 1"    

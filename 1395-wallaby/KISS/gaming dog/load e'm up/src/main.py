@@ -10,21 +10,25 @@ def main():
     motor(3,32)    
     msleep(4500)    
         
-    motor(0,00)    
-    motor(3,32)    
+    motor(0,-30)    
+    motor(3,-32)    
     msleep(2750)    
     
+    motor(0,0)    
+    motor(3,32)    
+    msleep(3000)
+        
     motor(0,30)    
     motor(3,32)    
-    msleep(4000)    
+    msleep(3000)    
         
     motor(0,30)    
     motor(3,00)    
-    msleep(4750)
+    msleep(4500)
         
     motor(0,30)    
     motor(3,33)    
-    msleep(7000)    
+    msleep(12000)    
         
     motor(0,-30)    
     motor(3,-33)    

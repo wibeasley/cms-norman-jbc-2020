@@ -7,7 +7,7 @@ def main():
         
     print "go forward"    
     motor(0, 40)
-    motor(3, 40)
+    motor(3, 48)
     msleep(6900)
     
         
@@ -25,31 +25,31 @@ def main():
         
     print "go forward"    
     motor(0, 40)
-    motor(3, 40)
+    motor(3, 45)
     msleep(4000)
     
         
     print "pivot left 1"    
     motor(0, -30)
     motor(3, 30)
-    msleep(1900)    
+    msleep(1910)    
           
         
     print "go forward"    
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(7000)
     
         
     print "pivot left 2"   
     motor(0, -30)
-    motor(3, 30)
-    msleep(2000)
+    motor(3, 40)
+    msleep(2010)
         
         
     print "go forward"    
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(7000)        
 
     
@@ -61,7 +61,7 @@ def main():
     
     print "go forward"    
     motor(0, 40)
-    motor(3, 40)
+    motor(3, 48)
     msleep(6000)
     
         
@@ -79,8 +79,8 @@ def main():
         
     print "go forward"    
     motor(0, 40)
-    motor(3, 40)
-    msleep(4000)
+    motor(3, 48)
+    msleep(6000)
     
         
     print "pivot left 1"    
@@ -91,13 +91,13 @@ def main():
         
     print "go forward"    
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(4400)
     
         
     print "go forward"    
     motor(0, 30)
-    motor(3, 30)
+    motor(3, 35)
     msleep(5000)
         
          

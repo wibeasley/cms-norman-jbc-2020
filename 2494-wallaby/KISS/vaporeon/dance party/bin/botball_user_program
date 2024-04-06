@@ -49,9 +49,14 @@ def main():
         
     
     print"pick up"
-    set_servo_position(1, 1006)
-    enable_servos()    
+    set_servo_position(0, 604)
+    enable_servos() 
         
+        
+       
+    print"pick up"
+    set_servo_position(0, 1103)
+    enable_servos()     
 if __name__== "__main__":
     sys.stdout = os.fdopen(sys.stdout.fileno(),"w",0)
     main();

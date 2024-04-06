@@ -25,10 +25,20 @@ def main():
     motor(3,00)    
     msleep(9000) 
    
-    print "forward"    
+    print "backwards"    
     motor(0,-20)    
     motor(3,-20)
     msleep(9000)       
+    
+    print "spin"    
+    motor(0,00)    
+    motor(3,30)    
+    msleep(9000)    
+        
+        
+        
+        
+        
         
              
 if __name__== "__main__":

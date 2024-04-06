@@ -9,8 +9,14 @@ def main():
     print "forward"
     motor(0, 30)
     motor(3, 30)
-    msleep(11000)    
+    msleep(5000)    
     
+        
+    print "forward"
+    motor(0, 30)
+    motor(3, 30)
+    msleep(6000)    
+        
         
     print "pivot"
     motor(0, 30)

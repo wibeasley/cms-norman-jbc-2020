@@ -16,7 +16,7 @@ def main():
     "pivot"    
     motor(0,-30)    
     motor(3,30)    
-    msleep(2000)    
+    msleep(1900)    
         
         
     "go forward"   

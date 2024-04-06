@@ -49,21 +49,23 @@ def main():
     set_servo_position(0, 1087)             
     enable_servos()       
     msleep(6000) 
+    
+    print "stop"    
+    motor(0,00)
+    motor(3,00)
+    msleep(1000)          
         
     print "backward"    
     motor(0,-30)    
     motor(3,-30)    
-    msleep(1000)          
+    msleep(500)          
       
     print "grab"     
     set_servo_position(0, 1543)             
     enable_servos()       
     msleep(6000)    
         
-    print "stop"    
-    motor(0,00)
-    motor(3,00)
-    msleep(1000)
+   
         
         
         

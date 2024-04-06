@@ -10,17 +10,17 @@
 #   Or temporarily comment out the robots in the array below.
 #   Remember bash does not use commas when defining an array.
 bot_ssids=(
-  "4044-wombat"
-  "4045-wombat"
-  # "4054-wombat"   # 5: E & R
-  # "1395-wallaby"  # 5: E & E
-  # "1397-wallaby"  # 4/5: E & C
-  # "2488-wallaby"  # 6: A & E & R
-  # "2494-wallaby"  # 8: A & E
-  # "2486-wallaby"  # 3: E & H & R
-  # "1399-wallaby"  # 3: P & P & R
-  # "1408-wallaby"  # 4/5: R & M
-  # "1407-wallaby"  # 4/5: R & M
+  # "4044-wombat"
+  # "4045-wombat"
+  "4054-wombat"   # 5: E & R
+  "1395-wallaby"  # 5: E & E
+  "1397-wallaby"  # 4/5: E & C
+  "1399-wallaby"  # 3: P & P & R
+  "1407-wallaby"  # 4/5: R & M
+  "1408-wallaby"  # 4/5: R & M
+  "2486-wallaby"  # 3: E & H & R
+  "2488-wallaby"  # 6: A & E & R
+  "2494-wallaby"  # 8: A & E
   # "4211-wallaby"  # unassigned - does not boot
 )
 

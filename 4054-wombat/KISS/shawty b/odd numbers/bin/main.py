@@ -56,5 +56,14 @@ def main():
     k.motor(3,0)
     k.msleep(4000)
     
+    print("move forward a little bit", flush = True)
+    k.motor(0,35)
+    k.motor(3,35)
+    k.msleep(1500)
+    
+    print("turn back around 180 der=grees", flush = True)
+    k.motor(0,0)
+    k.motor(3,35)
+    k.msleep(8000)
 
 main()

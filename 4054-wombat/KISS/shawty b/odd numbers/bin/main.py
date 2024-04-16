@@ -49,7 +49,7 @@ def main():
     print("go straight", flush = True)
     k.motor(0,35)
     k.motor(3,35)
-    k.msleep(2500)
+    k.msleep(2250)
     
     print("numero quinco", flush = True)
     k.motor(0,35)
@@ -64,6 +64,22 @@ def main():
     print("turn back around 180 der=grees", flush = True)
     k.motor(0,0)
     k.motor(3,35)
-    k.msleep(8000)
-
+    k.msleep(11000)
+    
+    print("movee at the purrfect angola on to numero nueve", flush = True)
+    k.motor(0,200)
+    k.motor(3,200)
+    k.msleep(2000)
+    
+    print("use your wheels to make a cuvertrueeeeeeeera mark on the floor", flush = True)
+    k.motor(0,35)
+    k.motor(3,0)
+    k.msleep(2500)
+    
+    print("hit numero once like it's april 20th", flush = True)
+    k.motor(0,35)
+    k.motor(3,35)
+    k.msleep(2000)
+    
+    
 main()
